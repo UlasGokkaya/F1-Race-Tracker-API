@@ -16,5 +16,14 @@ public class Driver {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column()
+    @Column(nullable = false)
+    private String firstName;
+    private String lastName;
+
+    private String nationality;
+    private int racingNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
 }

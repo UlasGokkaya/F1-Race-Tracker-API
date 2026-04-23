@@ -24,6 +24,6 @@ public class Team {
     private int foundedYear;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
-    private List<> drivers;
+    private List<Driver> drivers;
 
 }
