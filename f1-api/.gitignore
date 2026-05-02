@@ -6,7 +6,7 @@ target/
 !**/src/test/**/target/
 
 # Hassas bilgiler - GitHub'a gitmesin!
-src/main/resources/application.properties
+**/application.properties
 src/main/resources/application-prod.properties
 src/main/resources/application-local.properties
 
