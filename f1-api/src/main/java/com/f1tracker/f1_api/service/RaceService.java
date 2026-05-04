@@ -1,6 +1,7 @@
 package com.f1tracker.f1_api.service;
 
 import com.f1tracker.f1_api.entity.Race;
+import com.f1tracker.f1_api.exception.RaceNotFoundException;
 import com.f1tracker.f1_api.repository.RaceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class RaceService {
     // Get the race with its id
     public Race getRaceById(Long id) {
         return raceRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Race not found"+ id));
+                .orElseThrow(() -> new RaceNotFoundException(id));
     }
     // Create the race
     public Race createRace(Race race) {

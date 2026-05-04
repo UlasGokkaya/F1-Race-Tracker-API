@@ -1,6 +1,7 @@
 package com.f1tracker.f1_api.service;
 
 import com.f1tracker.f1_api.entity.Driver;
+import com.f1tracker.f1_api.exception.DriverNotFoundException;
 import com.f1tracker.f1_api.repository.DriverRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class DriverService {
     //Get Driver to his ID
     public Driver getDriverById(Long id){
         return driverRepository.findById(id)
-                .orElseThrow(()-> new RuntimeException("Driver not found: "+ id));
+                .orElseThrow(()-> new DriverNotFoundException(id));
     }
 
     //Add new driver

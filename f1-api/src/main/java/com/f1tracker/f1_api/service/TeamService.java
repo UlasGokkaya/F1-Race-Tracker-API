@@ -1,6 +1,7 @@
 package com.f1tracker.f1_api.service;
 
 import com.f1tracker.f1_api.entity.Team;
+import com.f1tracker.f1_api.exception.TeamNotFoundException;
 import com.f1tracker.f1_api.repository.TeamRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ public class TeamService {
     //Get the team from its id
     public Team getTeamById(Long id) {
         return teamRepository.findById(id).
-                orElseThrow(()-> new RuntimeException("Team not found" + id));
+                orElseThrow(()-> new TeamNotFoundException(id));
 
     }
 
