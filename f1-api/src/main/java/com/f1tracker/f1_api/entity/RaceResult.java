@@ -18,8 +18,8 @@ public class RaceResult {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int position; // 1
-    private int points; // 25
+    private Integer position;
+    private Integer points;
     private String fastestLap; // "1.12.345"
     @ManyToOne
     @JoinColumn(name="driver_id")

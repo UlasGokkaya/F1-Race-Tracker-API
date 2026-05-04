@@ -1,5 +1,6 @@
 package com.f1tracker.f1_api.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,8 +22,8 @@ public class Team {
     private String name;
 
     private String nationality;
-    private int foundedYear;
-
+    private Integer foundedYear;
+    @JsonIgnore
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
     private List<Driver> drivers;
 

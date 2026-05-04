@@ -1,9 +1,9 @@
 package com.f1tracker.f1_api.entity;
+
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import java.util.List;
 
 @Entity
 @Table(name= "drivers")
@@ -21,7 +21,7 @@ public class Driver {
     private String lastName;
 
     private String nationality;
-    private int racingNumber;
+    private Integer racingNumber;
 
     @ManyToOne
     @JoinColumn(name = "team_id")
