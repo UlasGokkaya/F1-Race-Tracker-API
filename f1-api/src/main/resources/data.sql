@@ -30,11 +30,11 @@ INSERT INTO drivers (first_name, last_name, nationality, racing_number, team_id)
 ('Alex', 'Albon', 'Thai', 23, 7),
 ('Carlos', 'Sainz', 'Spanish', 55, 7),
 ('Liam', 'Lawson', 'New Zealander', 30, 8),
-('Arvid', 'Lindblad', 'Swedish', 5, 8),
+('Arvid', 'Lindblad', 'Swedish', 41, 8),
 ('Oliver', 'Bearman', 'British', 87, 9),
 ('Esteban', 'Ocon', 'French', 31, 9),
 ('Nico', 'Hulkenberg', 'German', 27, 10),
-('Gabriel', 'Bortoleto', 'Brazilian', 21, 10),
+('Gabriel', 'Bortoleto', 'Brazilian', 5, 10),
 ('Sergio', 'Perez', 'Mexican', 11, 11),
 ('Valtteri', 'Bottas', 'Finnish', 77, 11)
 ON CONFLICT DO NOTHING;
