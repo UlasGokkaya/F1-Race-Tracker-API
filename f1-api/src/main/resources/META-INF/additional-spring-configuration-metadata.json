@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "jolpica.base-url",
+      "type": "java.lang.String",
+      "description": "Base URL for the Jolpica F1 API (Ergast-compatible)."
+    }
+  ]
+}
