@@ -16,6 +16,9 @@ public class Driver {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true)
+    private String driverId; // Jolpica external ID e.g. "max_verstappen"
+
     @Column(nullable = false)
     private String firstName;
     private String lastName;

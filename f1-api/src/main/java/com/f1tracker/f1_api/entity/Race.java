@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"season", "round"}))
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,6 +25,7 @@ public class Race {
     private String country; //"Spain"
     private LocalDate raceDate; // 2024-06-23
     private Integer season; //2024
+    private Integer round; // 1, 2, 3...
 
     @OneToMany(mappedBy = "race", cascade = CascadeType.ALL)
     private List<RaceResult> results;
