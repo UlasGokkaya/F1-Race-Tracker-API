@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { Driver, Team, Race } from '../types'
+import type { Driver, Team, Race, DriverStanding, ConstructorStanding, Progression } from '../types'
 
 const api = axios.create({ baseURL: '/api' })
 
@@ -13,3 +13,7 @@ export const createTeam  = (data: Omit<Team, 'id'>) => api.post<Team>('/teams', 
 export const createRace  = (data: Omit<Race, 'id'>) => api.post<Race>('/races', data)
 export const deleteRace  = (id: number) => api.delete(`/races/${id}`)
 export const deleteTeam  = (id: number) => api.delete(`/teams/${id}`)
+
+export const getDriverStandings     = (season: number) => api.get<DriverStanding[]>(`/standings/drivers/${season}`)
+export const getConstructorStandings = (season: number) => api.get<ConstructorStanding[]>(`/standings/constructors/${season}`)
+export const getProgression         = (season: number) => api.get<Progression>(`/standings/progression/${season}`)

@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
 
 const links = [
-    { to: '/',        label: '🏠 Dashboard' },
-    { to: '/drivers', label: '🧑‍✈️ Sürücüler' },
-    { to: '/teams',   label: '🏎️ Takımlar'  },
-    { to: '/races',   label: '🏁 Yarışlar'  },
+    { to: '/',          label: '🏠 Dashboard'   },
+    { to: '/drivers',   label: '🧑‍✈️ Sürücüler' },
+    { to: '/teams',     label: '🏎️ Takımlar'    },
+    { to: '/races',     label: '🏁 Yarışlar'    },
+    { to: '/standings', label: '🏆 Sıralama'    },
 ]
 
 export default function Navbar() {

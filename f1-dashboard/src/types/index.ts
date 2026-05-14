@@ -22,3 +22,30 @@ export interface Race {
     raceDate: string
     season: number
 }
+
+export interface DriverStanding {
+    position: number
+    name: string
+    team: string
+    racingNumber: number | null
+    points: number
+    wins: number
+}
+
+export interface ConstructorStanding {
+    position: number
+    team: string
+    points: number
+    wins: number
+}
+
+export interface DriverProgression {
+    name: string
+    team: string
+    cumulativePoints: number[]
+}
+
+export interface Progression {
+    rounds: string[]
+    drivers: DriverProgression[]
+}
